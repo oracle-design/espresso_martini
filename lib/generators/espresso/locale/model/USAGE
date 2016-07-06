@@ -1,0 +1,12 @@
+Description:
+    generate locale file for models.
+
+Example:
+    rails generate espresso:locale:model user
+
+    This will create:
+        app/config/locales/models/user/en.yml
+
+    :en is default language, for other language we can add language name as argument.
+
+    rails generate espresso:locale:model user zh-TW

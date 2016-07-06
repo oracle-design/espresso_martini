@@ -9,7 +9,7 @@ Espresso Martini 是針對 odd 內部 Rails 專案的開發慣例與設計架構
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'espresso_martini'
+gem 'espresso_martini', github: 'oracle-design/espresso_martini'
 ```
 
 And then execute:

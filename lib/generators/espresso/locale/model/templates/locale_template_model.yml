@@ -1,0 +1,11 @@
+<%= language %>:
+  activerecord:
+    models:
+      <%= file_name %>:
+        one:
+        other:
+    attributes:
+      <%= file_name %>:
+
+  enums:
+    <%= file_name %>:
