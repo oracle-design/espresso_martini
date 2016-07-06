@@ -1,28 +1,24 @@
 # Espresso Martini
 
-Espresso Martini 是針對 odd 內部 Rails 專案的開發慣例與設計架構製作的 gem。主要由一連串的 generators 所構成，方便產生各式開發過程中需要
-建立的檔案，方便團隊成員遵守一致的 coding style。
-
+Espresso Martini 是針對 odd 內部 Rails 專案的開發慣例與設計架構製作的 gem。主要由一連串的 generators 所構成，方便產生各式開發過程中需要 建立的檔案，方便團隊成員遵守一致的 coding style。
 
 ## Installation
-
-Add this line to your application's Gemfile:
 
 ```ruby
 gem 'espresso_martini', github: 'oracle-design/espresso_martini'
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install espresso_martini
-
 ## Usage
 
-TODO: Write usage instructions here
+### 產生 Model 的 i18n 檔案
+
+`rails generate espresso:locale:model [MODEL] [LANGUAGE]`
+
+例如：
+
+`rails g espresso:locale:model user zh-TW`
+
+會在路徑 `app/config/locales/models/user/zh-TW.yml` 產生一個 template
 
 ## Development
 
@@ -32,8 +28,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/espresso_martini. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
+Bug reports and pull requests are welcome on GitHub at <https://github.com/[USERNAME]/espresso_martini>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
