@@ -4,8 +4,14 @@
       <%= file_name %>:
         one:
         other:
+
     attributes:
       <%= file_name %>:
+
+    errors:
+      models:
+        <%= file_name %>:
+          attributes:
 
   enums:
     <%= file_name %>:
