@@ -1,4 +1,4 @@
-module Espresso
+module Martini
   module Locale
     module Generators
       class ModelGenerator < Rails::Generators::NamedBase

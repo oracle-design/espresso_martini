@@ -1,0 +1,11 @@
+Description:
+    install common coffeescript files for EspressoMartini
+
+Example:
+    rails generate espresso:install
+
+    This will create:
+      - app/assets/javascript/_em_base.coffee
+      - app/assets/javascript/_espresso_martini.coffee
+      - app/assets/javascript/components/
+      - app/assets/javascript/tools/

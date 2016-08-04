@@ -2,6 +2,8 @@
 
 Espresso Martini 是針對 odd 內部 Rails 專案的開發慣例與設計架構製作的 gem。主要由一連串的 generators 所構成，方便產生各式開發過程中需要 建立的檔案，方便團隊成員遵守一致的 coding style。
 
+這個 gem 主要分為 Espresso 和 Martini 兩個部分。Espresso 包含了一些 coffeescript 的 generators 和我們常用的工具。而 Martini 則是和 Rails 相關的 generators。
+
 ## Installation
 
 ```ruby
@@ -10,9 +12,17 @@ gem 'espresso_martini', github: 'oracle-design/espresso_martini'
 
 ## Usage
 
-### 產生 Model 的 i18n 檔案
+### Espresso
 
-`rails generate espresso:locale:model [MODEL] [LANGUAGE]`
+#### 安裝 Coffeescript 基本設定檔案
+
+`rails generate espresso:install`
+
+### Martini
+
+#### 產生 Model 的 i18n 檔案
+
+`rails generate martini:locale:model [MODEL] [LANGUAGE]`
 
 例如：
 

@@ -2,7 +2,7 @@ Description:
     generate locale file for models.
 
 Example:
-    rails generate espresso:locale:model user
+    rails generate martini:locale:model user
 
     This will create:
         app/config/locales/models/user/en.yml
