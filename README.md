@@ -18,6 +18,12 @@ gem 'espresso_martini', github: 'oracle-design/espresso_martini'
 
 `rails generate espresso:install`
 
+#### 產生 Coffeescript ViewController 檔案
+
+`rails generate espresso:controller LandingPage`
+
+會產生 `app/assets/javascript/controllers/_landing_page_controller.coffee` 檔案
+
 ### Martini
 
 #### 產生 Model 的 i18n 檔案

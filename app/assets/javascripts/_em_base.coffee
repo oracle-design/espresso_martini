@@ -1,3 +1,2 @@
 class App.Base
-
   constructor: ->
