@@ -8,6 +8,7 @@ module Espresso
         template '_espresso_martini.coffee', 'app/assets/javascripts/_espresso_martini.coffee'
         template 'components/.keep', 'app/assets/javascripts/components/.keep'
         template 'tools/.keep', 'app/assets/javascripts/tools/.keep'
+        template 'view_controllers/.keep', 'app/assets/javascripts/view_controllers/.keep'
       end
     end
   end

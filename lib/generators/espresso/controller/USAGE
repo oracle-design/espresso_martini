@@ -1,0 +1,8 @@
+Description:
+    generating a coffeescript controller.
+
+Example:
+    rails generate espresso:controller LandingPage
+
+    This will create:
+      - app/assets/javascript/controllers/_landing_page_controller.coffee
