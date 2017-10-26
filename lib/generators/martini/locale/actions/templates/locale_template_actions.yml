@@ -1,0 +1,22 @@
+<%= language %>:
+  actions:
+    cancel: 取消
+    close: 關閉
+    confirm: 確認
+    confirm_delete: 確定要刪除%{model}嗎？
+    confirm_to_delete: 確認刪除%{model}
+    delete: 刪除
+    destroy: '刪除%{modle}'
+    detail_of: '%{model}詳細內容'
+    edit: '編輯%{model}'
+    index: '%{model}列表'
+    management: '管理%{model}'
+    new: '建立%{model}'
+    open: 開啟
+    options: 選項
+    preview: 預覽
+    reply: 回覆
+    save: 儲存
+    show:  詳細內容
+    submit: '送出資料'
+    this_action_can_not_retrieve: 這個動作將無法復原

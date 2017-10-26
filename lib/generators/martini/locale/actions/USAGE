@@ -1,0 +1,12 @@
+Description:
+    generate locale file for actions.
+
+Example:
+    rails generate martini:locale:actions
+
+    This will create:
+        app/config/locales/actions/en.yml
+
+    :en is default language, for other language we can add language name as argument.
+
+    rails generate espresso:locale:actions zh-TW
