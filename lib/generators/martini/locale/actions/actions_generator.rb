@@ -7,7 +7,7 @@ module Martini
         argument :language, type: :string, default: 'en'
 
         def generate_locale
-          template "locale_template_actions.yml", File.join('config/locales/actions', file_path, "#{language}.yml")
+          template "locale_template_actions.yml", File.join('config/locales/actions', "#{language}.yml")
         end
       end
     end
