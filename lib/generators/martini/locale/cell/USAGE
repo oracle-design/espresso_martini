@@ -1,0 +1,12 @@
+Description:
+    generate locale file for cell.
+
+Example:
+    rails generate martini:locale:cell user
+
+    This will create:
+        app/config/locales/cells/user/en.yml
+
+    :en is default language, for other language we can add language name as argument.
+
+    rails generate espresso:locale:cell user zh-TW

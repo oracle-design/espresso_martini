@@ -36,6 +36,16 @@ gem 'espresso_martini', github: 'oracle-design/espresso_martini'
 
 會在路徑 `app/config/locales/models/user/zh-TW.yml` 產生一個 template
 
+#### 產生 Cell 的 i18n 檔案
+
+`rails generate martini:locale:cell [CELL] [LANGUAGE]`
+
+例如：
+
+`rails g espresso:locale:cell user zh-TW`
+
+會在路徑 `app/config/locales/cells/user/zh-TW.yml` 產生一個 template
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

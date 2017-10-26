@@ -1,5 +1,6 @@
 <%= language %>:
-  activerecord:
+  # model and attributes name
+  activerecord: &default
     models:
       <%= file_name %>:
         one:
@@ -12,6 +13,12 @@
       models:
         <%= file_name %>:
           attributes:
+  activemodel: *default
 
+  # Enums
   enums:
+    <%= file_name %>:
+
+  # AASM state machine
+  aasm_state:
     <%= file_name %>:
