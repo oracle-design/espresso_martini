@@ -1,3 +1,0 @@
-class App.<%= controller_name.gsub('::', '').camelcase %>ViewController
-  constructor: ->
-    # body...
