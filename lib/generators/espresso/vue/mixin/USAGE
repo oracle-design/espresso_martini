@@ -1,0 +1,22 @@
+Description:
+    Generate vue mixin
+
+Example:
+    rails g espresso:vue:mixin attachable
+
+    This will create:
+        app/javascript/src/application/js/components/mixin/attachable_mixin.js
+
+    rails g espresso:vue:mixin atricle::replyable
+
+    This will create:
+        app/javascript/src/application/js/components/mixin/article/replyable_mixin.js
+
+    By default, the scope will be `application`, if you want to generate
+    initializer in different scope, using 2nd argument to make option.
+
+    e.g.
+    rails g espresso:vue:mixin attachable admin
+
+    This will create:
+        app/javascript/src/admin/js/components/mixin/attachable_mixin.js
