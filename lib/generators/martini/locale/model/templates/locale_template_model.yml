@@ -2,23 +2,23 @@
   # model and attributes name
   activerecord: &default
     models:
-      <%= file_name %>:
+      <%= file_path %>:
         one:
         other:
 
     attributes:
-      <%= file_name %>:
+      <%= file_path %>:
 
     errors:
       models:
-        <%= file_name %>:
+        <%= file_path %>:
           attributes:
   activemodel: *default
 
   # Enums
   enums:
-    <%= file_name %>:
+    <%= file_path %>:
 
   # AASM state machine
   aasm_state:
-    <%= file_name %>:
+    <%= file_path %>:
