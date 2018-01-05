@@ -9,7 +9,7 @@ module Espresso
         def generate_initializer
           initializer_path = name.split('::')[0..-2].join('/')
 
-          template 'initializer_template.js', File.join("app/javascript/src/#{scope_name}/js/vue_initializers/", initializer_path, "#{file_name}.js")
+          template 'initializer_template.js', File.join("app/javascript/src/#{scope_name}/js/vue_initializers/", initializer_path.downcase, "#{file_name}.js")
         end
       end
     end

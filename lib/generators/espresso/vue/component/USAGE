@@ -1,0 +1,21 @@
+Description:
+    Generate vue component
+
+Example:
+    rails g espresso:vue:component project::SidebarHeader
+    or
+    rails g espresso:vue:component project::sidebar-header
+    or
+    rails g espresso:vue:component project::sidebar_header
+
+    This will create:
+        app/javascript/src/application/js/components/project/sidebar-header.vue
+
+    By default, the scope will be `application`, if you want to generate
+    initializer in different scope, using 2nd argument to make option.
+
+    e.g.
+    rails g espresso:vue:initializer comment::comment_list_table admin
+
+    This will create:
+        app/javascript/src/admin/js/components/project/sidebar-header.vue
