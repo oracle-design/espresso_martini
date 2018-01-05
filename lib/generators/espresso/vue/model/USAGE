@@ -1,0 +1,13 @@
+Description:
+    Generate vue model with basic vuex store setup in shared folder
+
+Example:
+    rails generate espresso:vue:model ExampleModel
+
+    This will create:
+        app/javascript/src/shared/resource_models/test_model.js
+        app/javascript/src/shared/store_modules/test_models/actions.js
+        app/javascript/src/shared/store_modules/test_models/getters.js
+        app/javascript/src/shared/store_modules/test_models/index.js
+        app/javascript/src/shared/store_modules/test_models/mutation-types.js
+        app/javascript/src/shared/store_modules/test_models/mutations.js
