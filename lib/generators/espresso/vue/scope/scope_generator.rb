@@ -15,6 +15,8 @@ module Espresso
           template 'src/scope/css/base/_buttons.sass', %(app/javascript/src/#{scope_name}/css/base/_buttons.sass)
           template 'src/scope/css/base/_colors.sass', %(app/javascript/src/#{scope_name}/css/base/_colors.sass)
           template 'src/scope/css/base/_form.sass', %(app/javascript/src/#{scope_name}/css/base/_form.sass)
+          template 'src/scope/css/base/_variables.sass', %(app/javascript/src/#{scope_name}/css/base/_variables.sass)
+          template 'src/scope/css/base/_zindex.sass', %(app/javascript/src/#{scope_name}/css/base/_zindex.sass)
           template 'src/scope/css/base/index.sass', %(app/javascript/src/#{scope_name}/css/base/index.sass)
           template 'src/scope/css/common/.keep', %(app/javascript/src/#{scope_name}/css/common/.keep)
           template 'src/scope/css/application.css.sass', %(app/javascript/src/#{scope_name}/css/application.css.sass)
