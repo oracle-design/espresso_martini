@@ -8,7 +8,7 @@
 export default {
   // components: {},
 
-  // mixins: {},
+  // mixins: [],
 
   // props: {},
 
