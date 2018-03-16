@@ -1,6 +1,6 @@
 <template lang="pug">
 
-//- do it!
+.<%= %(#{component_path.dasherize}${name.split('::')[0..-2].map(&:dasherize).join('-')}) %>
 
 </template>
 
