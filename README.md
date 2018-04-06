@@ -4,7 +4,7 @@ Espresso Martini 是針對 odd 內部 Rails 專案的開發慣例與設計架構
 
 這個 gem 主要分為 Espresso 和 Martini 兩個部分。Espresso 包含了與 javascript 相關的 generators，目前主要用於 Vuejs 的開發流程。而 Martini 則是和 Rails 相關的 generators。
 
-----
+---
 
 ## Installation
 
@@ -12,7 +12,7 @@ Espresso Martini 是針對 odd 內部 Rails 專案的開發慣例與設計架構
 gem 'espresso_martini', github: 'oracle-design/espresso_martini'
 ```
 
-----
+---
 
 ## Usage
 
@@ -35,10 +35,15 @@ app/javascript
     │   ├── i18n.js
     │   └── zh-TW.js
     └── shared               # 所有 scope 都會共用的檔案
-        ├── errors.js        # Error Object，用於管理 server 回傳的錯誤 json
-        ├── form.js          # Form Object，用於管理前端表單的內容
+        ├── forms            # Form Objects，用於處理前端表單的內容
+        ├── plugins          # Vue plugins，用來提供 Vue 一些 global 的功能，例如 i18n 的 helpers
+        ├── policies         # Policy Objects，使用者權限驗證的定義
         ├── resource_models  # 供 vuex 使用的 resource models，基本上會對應 rails 的 model
-        └── store_modules    # vuex 的 modules，一般來說所有 scope 會共用
+        ├── services         # Service Objects，常常會復用的功能或商業邏輯封裝
+        ├── store_modules    # vuex 的 modules，一般來說所有 scope 會共用
+        ├── user_models      # 提供 currentUser 功能，把每一種使用者的角色封裝起來，搭配 policy 使用
+        ├── vue_components   # scopes 間會共用的 components
+        └── vue_mixins       # scopes 間會共用的 mixins
 ```
 
 #### 產生 Scope
@@ -60,7 +65,9 @@ app/javascript/src/admin/
 │   │   │   ├── _costomized-variables.sass
 │   │   │   └── index.sass                       # 這部分可參考官方文件
 │   │   └── index.sass
-│   └── common
+│   ├── common       # 一般 styles
+│   ├── components   # vue components 用的 styles
+│   └── pages        # Rails 中獨立頁面的 styles
 ├── images
 └── js
     ├── application_initializer.js  # 整個前端 javascript 環境的啟動設定
@@ -78,7 +85,6 @@ app/javascript/src/admin/
     └── vue_initializers            # 用來讓 Rails views 使用的 vue initializer
         └── common
             └── flash_message.js
-
 ```
 
 產生後可再依照開發上的需求進行細部自訂。
@@ -96,22 +102,30 @@ app/javascript/src/shared
 └── store_modules
     └── order_items            # 提供基礎 vuex module 設定
         ├── actions.js         # 包含基本 CRUD 操作
-        ├── getters.js         # 包含 allResources, getResourceByID 等基本功能
+        ├── getters.js         # 包含 all, find 等基本功能
         ├── index.js
         ├── mutation-types.js  # 包含 FETCH, GET, UPDATE, DELETE 等基本 mutations
         └── mutations.js
 ```
 
+##### Resource Model 說明
+
+請注意 resource model 檔案產生後，需要自訂 `ATTRIBUTES` 這個常數，定義好 API 會提供的所有 attributes。而 `EDITABLE_ATTRIBUTES` 則是需要定義有哪些 attributes 是使用者可編輯的，這個部分 Form Object 產生欄位內容時會使用到，必須詳細定義。
+
+每個 resource model 預設會有 `.all(options = {})` 和 `.find(id)` 兩個 static method，可以和 API 溝通取得所有、或特定 ID 的資料。而 resource model 的 instance 預設會有 `#save` 和 `#destroy` 可用來透過 API 建立、更新、或刪除資料。若 resource 本身還有其他特殊的 API 則需要自行定義。例如 User 可能會有 `#suspend` 等等。
+
+除此之外 resource model 還提供 helper methods，例如預設的 `#attributes`、`#isNewRecord` 等。若 resource 有非常常用的功能也可自行增加到 helpers。例如若有個 resource 有價格欄位，則可選擇自行定義一個 helper 來把從 API 得到的資料轉換為可用於前端顯示的格式。
+
 #### 產生 Initializer
 
-`rails g espresso:vue:initializer project::project_list_table`
+`rails g espresso:vue:initializer project::project_list_table_container`
 
 這會產生一個讓 rails 可以在 views 中使用的 vue initializer
 
 ```bash
 app/javascript/src/application/js/vue_initializers
 └── project
-    └── project_list_table.js
+    └── project_list_table_container.js
 ```
 
 在 application_initializer.js 中，會自動找到這個檔案，並在頁面的 DOM 中找到有需要的 node 自動建立 Vue 的 instance。
@@ -121,7 +135,7 @@ app/javascript/src/application/js/vue_initializers
 ```slim
 // projects/index.html.slim
 
-.project-list-container(data-vue="project_list_table")
+.project-list-container(data-vue="project_list_table_container")
   ...
 ```
 
@@ -148,7 +162,7 @@ app/javascript/src/application/js/components/mixins
 └── attachable_mixin.js
 ```
 
-----
+---
 
 ### Martini
 
