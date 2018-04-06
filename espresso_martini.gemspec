@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'odd internal usage'
   spec.description   = 'odd internal usage'
-  spec.homepage      = "http://oddesign.expert"
+  spec.homepage      = "https://www.odd.tw"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

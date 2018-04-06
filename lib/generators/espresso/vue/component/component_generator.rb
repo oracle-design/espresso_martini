@@ -12,6 +12,10 @@ module Espresso
           template 'component_template.vue', File.join("app/javascript/src/#{scope_name}/js/components/", component_path.downcase, "#{file_name.dasherize}.vue")
           template 'component_style_template.sass', File.join("app/javascript/src/#{scope_name}/css/components/", component_path.downcase, "#{file_name.dasherize}.sass")
         end
+
+        def css_class_name
+          %(.#{name.split('::').map(&:dasherize).join('-')})
+        end
       end
     end
   end

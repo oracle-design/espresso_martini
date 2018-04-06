@@ -15,6 +15,22 @@ module Espresso
           template 'vuex_module/mutation-types.js', %(app/javascript/src/shared/store_modules/#{model_name.underscore.pluralize}/mutation-types.js)
           template 'vuex_module/mutations.js', %(app/javascript/src/shared/store_modules/#{model_name.underscore.pluralize}/mutations.js)
         end
+
+        def resource_type
+          @resource_type ||= model_name.underscore.pluralize
+        end
+
+        def model_class_name
+          @model_class_name ||= model_name.classify
+        end
+
+        def mutation_name
+          @mutation_name ||= model_name.underscore.upcase
+        end
+
+        def mutation_name_pluralized
+          @mutation_name_pluralized ||= model_name.underscore.pluralize.upcase
+        end
       end
     end
   end

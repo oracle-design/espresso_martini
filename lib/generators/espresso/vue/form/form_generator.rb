@@ -11,7 +11,7 @@ module Espresso
         end
 
         def import_path
-          up_count = name.split('::').length
+          up_count = name.split('::').length - 1
 
           return './form_base' if up_count < 2
 
