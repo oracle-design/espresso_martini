@@ -1,0 +1,10 @@
+Description:
+    Generate js policy object
+
+Example:
+    rails generate espresso:vue:policy ExampleModel
+
+    This will create:
+        app/javascript/src/shared/policies/example_model_policy.js
+    And insert import statments into:
+        app/javascript/src/shared/policies/index.js
