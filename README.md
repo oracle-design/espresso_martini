@@ -162,6 +162,51 @@ app/javascript/src/application/js/components/mixins
 └── attachable_mixin.js
 ```
 
+#### 產生 Form Object
+
+一般來說，`FormBase` 可以應付大部分的狀況，但由於它的 constructor 和 model 本身的 `#attributes` 方法耦合在一起，所以若有些 Form 需要較高程度的自訂欄位時，會需要產生一個新的 Form Object 繼承 `FormBase`，並修改 constructor 與 `#sync` 方法。
+
+`rails g espresso:vue:form Admin::CreateProduct`
+
+可以產生一個 form object
+
+```bash
+app/javascript/src/shared/forms/admin
+└── create_product_form.js
+```
+
+#### 產生 Policy Object
+
+`rails g espresso:vue:policy Article`
+
+可以產生一個 policy object
+
+```bash
+app/javascript/src/shared/policies/
+└── article_policy.js
+```
+
+並自動在 `app/javascript/src/shared/policies/index.js` import 這個新的 policy。預設會有 `index`, `show`, `create`, `update`, `destroy` 這五個動作的 policy 繼承自 PolicyBase 預設都是回傳 false，必須自行定義。
+
+##### 使用方法
+
+假設在 Article 的 index 頁面，只有建立 Article 的使用者本身才能夠修改、刪除它。那在 vue 中可能會像下面這樣使用 policy object。
+
+```js
+import ArticlePolicy from '../../../../shared/policies/article_policy'
+
+// ...
+methods: {
+    canEdit(article) {
+        return new ArticlePolicy(this.currentUser, article).update()
+    },
+
+    canDestroy(article) {
+        return new ArticlePolicy(this.currentUser, article).destroy()
+    }
+}
+```
+
 ---
 
 ### Martini
