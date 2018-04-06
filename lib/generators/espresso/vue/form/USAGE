@@ -1,0 +1,13 @@
+Description:
+    Generate js form object
+
+Example:
+    rails generate espresso:vue:form CreateComment
+
+    This will create:
+        app/javascript/src/shared/forms/create_comment_form.js
+
+    rails generate espresso:vue:form Admin::CreateProduct
+
+    This will create:
+        app/javascript/src/shared/forms/admin/create_product_form.js
