@@ -14,7 +14,7 @@ module Espresso
         end
 
         def css_class_name
-          %(.#{name.split('::').map(&:dasherize).join('-')})
+          %(.vc-#{name.split('::').map(&:dasherize).join('-')})
         end
       end
     end
