@@ -11,6 +11,10 @@ module Espresso
 
           template 'initializer_template.js', File.join("app/javascript/src/#{scope_name}/js/vue_initializers/", initializer_path.downcase, "#{file_name}.js")
         end
+
+        def component_name
+          file_name.dasherize
+        end
       end
     end
   end
