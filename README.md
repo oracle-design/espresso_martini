@@ -110,7 +110,7 @@ app/javascript/src/shared
 
 ##### Resource Model 說明
 
-請注意 resource model 檔案產生後，需要自訂 `ATTRIBUTES` 這個常數，定義好 API 會提供的所有 attributes。而 `EDITABLE_ATTRIBUTES` 則是需要定義有哪些 attributes 是使用者可編輯的，這個部分 Form Object 產生欄位內容時會使用到，必須詳細定義。
+請注意 resource model 檔案產生後，需要自訂 `OPTIONS` 這個常數，定義好 API 會提供的所有 attributes、以及有哪些 editableAttributes 是使用者可編輯的，這個部分 Form Object 產生欄位內容時會使用到，必須詳細定義。
 
 每個 resource model 預設會有 `.all(options = {})` 和 `.find(id)` 兩個 static method，可以和 API 溝通取得所有、或特定 ID 的資料。而 resource model 的 instance 預設會有 `#save` 和 `#destroy` 可用來透過 API 建立、更新、或刪除資料。若 resource 本身還有其他特殊的 API 則需要自行定義。例如 User 可能會有 `#suspend` 等等。
 
