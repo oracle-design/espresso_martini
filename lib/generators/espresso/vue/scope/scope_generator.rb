@@ -15,7 +15,7 @@ module Espresso
           template 'src/scope/css/base/_buttons.sass', %(app/javascript/src/#{normalized_scope_name}/css/base/_buttons.sass)
           template 'src/scope/css/base/_colors.sass', %(app/javascript/src/#{normalized_scope_name}/css/base/_colors.sass)
           template 'src/scope/css/base/_form.sass', %(app/javascript/src/#{normalized_scope_name}/css/base/_form.sass)
-          template 'src/scope/css/base/_form.sass', %(app/javascript/src/#{normalized_scope_name}/css/base/_mixins.sass)
+          template 'src/scope/css/base/_mixins.sass', %(app/javascript/src/#{normalized_scope_name}/css/base/_mixins.sass)
           template 'src/scope/css/base/_variables.sass', %(app/javascript/src/#{normalized_scope_name}/css/base/_variables.sass)
           template 'src/scope/css/base/_zindex.sass', %(app/javascript/src/#{normalized_scope_name}/css/base/_zindex.sass)
           template 'src/scope/css/base/index.sass', %(app/javascript/src/#{normalized_scope_name}/css/base/index.sass)
