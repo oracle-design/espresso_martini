@@ -11,3 +11,32 @@
   background-repeat: no-repeat
   @if $image_url != ''
     background-image: url(#{$image_url})
+
+%is-flex
+  display: flex
+
+// 垂直置中
+%is-flex-vc
+  display: flex
+  align-items: center
+
+// 垂直水平置中
+%is-flex-vc-hc
+  display: flex
+  align-items: center
+  justify-content: center
+
+// 撐滿 parent element
+%full-filled-inner-block
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+%has-lazyload
+  &[lazy="loading"]
+    +loader
+    position: absolute
+    top: calc(50% - .5em)
+    left: calc(50% - .5em)
