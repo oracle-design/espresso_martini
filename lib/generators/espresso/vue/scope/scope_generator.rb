@@ -25,7 +25,7 @@ module Espresso
           template 'src/scope/images/.keep', %(app/javascript/src/#{normalized_scope_name}/images/.keep)
 
           template 'src/scope/js/components/common/flash-message.vue', %(app/javascript/src/#{normalized_scope_name}/js/components/common/flash-message.vue)
-          template 'src/scope/js/components/mixins/backend_paginate_and_filter_and_sortable_mixin.js', %(app/javascript/src/#{normalized_scope_name}/js/components/mixins/backend_paginate_and_filter_and_sortable_mixin.js)
+          template 'src/scope/js/components/mixins/backend_paginate_filter_sort_and_searchable_mixin.js', %(app/javascript/src/#{normalized_scope_name}/js/components/mixins/backend_paginate_filter_sort_and_searchable_mixin.js)
           template 'src/scope/js/store/modules/.keep', %(app/javascript/src/#{normalized_scope_name}/js/store/modules/.keep)
           template 'src/scope/js/store/actions.js', %(app/javascript/src/#{normalized_scope_name}/js/store/actions.js)
           template 'src/scope/js/store/getters.js', %(app/javascript/src/#{normalized_scope_name}/js/store/getters.js)
