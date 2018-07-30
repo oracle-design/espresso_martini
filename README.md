@@ -84,7 +84,7 @@ app/javascript/src/admin/
     │   └── mutations.js
     └── vue_initializers            # 用來讓 Rails views 使用的 vue initializer
         └── common
-            └── flash_message.js
+            └── basic_initializer.js
 ```
 
 產生後可再依照開發上的需求進行細部自訂。
