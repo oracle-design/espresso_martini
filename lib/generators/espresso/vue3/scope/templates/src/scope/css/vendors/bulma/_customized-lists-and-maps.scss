@@ -1,0 +1,13 @@
+// ========================================================================== //
+// 參考 https://bulma.io/documentation/overview/customize/                    //
+// 可把自行新增的內容加入原本的 Lists and Maps                                  //
+// 例如新增一個顏色為 $odd_blue，則可以用 .is-odd_blue css class 來設定元素顏色  //
+// ========================================================================== //
+
+// example
+// $addColors: (
+//   'twitter':($twitter, $twitter-invert),
+//   'linkedin': ($linkedin, $linkedin-invert),
+//   'github': ($github, $github-invert)
+// );
+// $colors: map-merge($colors, $addColors);

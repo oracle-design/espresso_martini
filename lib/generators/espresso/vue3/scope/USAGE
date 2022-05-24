@@ -1,0 +1,13 @@
+Description:
+    Generate a vuejs scope with webpacker convention.
+
+    Including css, images, js folders in `src/[scope_name]`.
+    - CSS will pre-config with **bulma CSS** framework
+    - JS will including vue components folder, vuex setup, and initializers for rails side.
+
+Example:
+    rails generate espresso:vue:client
+
+    This will create:
+        app/javascripts/packs/client.js
+        app/javascripts/src/client/

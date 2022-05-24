@@ -1,4 +1,14 @@
-# Change Log
+# Changelog
+
+## 20220524
+
+- 新增新版 styles 架構 generators
+  - vue3:scope
+  - vue3:component
+  - vue3:page_style
+  - vue3:composable
+- 修正 vue scope generator
+- vue:component 產生的 sass 預設更改為 comment 掉的 css class name
 
 ## 20160824
 

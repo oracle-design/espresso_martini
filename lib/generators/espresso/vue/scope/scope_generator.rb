@@ -32,7 +32,7 @@ module Espresso
           template 'src/scope/js/store/index.js', %(app/javascript/src/#{normalized_scope_name}/js/store/index.js)
           template 'src/scope/js/store/mutation-types.js', %(app/javascript/src/#{normalized_scope_name}/js/store/mutation-types.js)
           template 'src/scope/js/store/mutations.js', %(app/javascript/src/#{normalized_scope_name}/js/store/mutations.js)
-          template 'src/scope/js/vue_initializers/common/flash_message.js', %(app/javascript/src/#{normalized_scope_name}/js/vue_initializers/common/flash_message.js)
+          template 'src/scope/js/vue_initializers/common/basic_initializer.js', %(app/javascript/src/#{normalized_scope_name}/js/vue_initializers/common/basic_initializer.js)
           template 'src/scope/js/application_initializer.js', %(app/javascript/src/#{normalized_scope_name}/js/application_initializer.js)
         end
 

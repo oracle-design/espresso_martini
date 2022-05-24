@@ -1,0 +1,9 @@
+Description:
+    Generate sass file for page
+
+Example:
+    rails g espresso:vue3:page_style Products::index admin
+
+    This will create:
+            app/javascript/src/admin/css/pages/products/index.sass
+    And forward from `pages/_index.sass`
