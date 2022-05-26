@@ -1,5 +1,10 @@
 # Changelog
 
+## 20220526
+
+- 更新 component template，使用 composition API
+- 新增 vue3:initializer，使用 composition API
+
 ## 20220524
 
 - 新增新版 styles 架構 generators

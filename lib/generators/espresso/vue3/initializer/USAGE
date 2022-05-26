@@ -1,0 +1,17 @@
+Description:
+    Generate vue initializer for rails views.
+
+Example:
+    rails g espresso:vue3:initializer comment::comment_list_table
+
+    This will create:
+        app/javascript/src/application/js/vue_initializer/comment/comment_list_table.js
+
+    By default, the scope will be `application`, if you want to generate
+    initializer in different scope, using 2nd argument to make option.
+
+    e.g.
+    rails g espresso:vue:initializer comment::comment_list_table admin
+
+    This will create:
+        app/javascript/src/admin/js/vue_initializer/comment/comment_list_table.js
