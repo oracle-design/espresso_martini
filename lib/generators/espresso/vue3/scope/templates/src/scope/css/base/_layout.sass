@@ -1,0 +1,24 @@
+@use '../abstracts/size'
+@use '../abstracts/color'
+@use '../utils'
+
+html
+  font-family: sans-serif
+
+.od-container
+  +utils.clearfix
+  position: relative
+  margin-inline: auto
+  width: min(100%, size.$laptop)
+  &.-has-padding
+    padding-inline: size.$gap * 0.25
+    +utils.larger-than(size.$tablet)
+      padding-inline: size.$gap
+  > .od-main-content
+    padding: size.$gap * 0.5
+    +utils.larger-than(size.$mobile)
+      margin-top: size.$gap
+      margin-right: size.$gap
+      padding: size.$gap
+      border-radius: size.$radius-normal
+      background-color: color.$white-smoke

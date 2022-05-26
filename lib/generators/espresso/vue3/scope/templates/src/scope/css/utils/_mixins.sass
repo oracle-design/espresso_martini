@@ -1,0 +1,71 @@
+@use 'bulma'
+@use '../abstracts/zindex'
+
+=clearfix
+  +bulma.clearfix
+
+=larger-than($screen-size)
+  @media screen and (min-width: $screen-size + 1px)
+    @content
+
+=smaller-than($screen-size)
+  @media screen and (max-width: $screen-size - 1px)
+    @content
+
+=between($start-screen-size, $end-screen-size)
+  @media screen and (min-width: $start-screen-size) and (max-width: end-screen-size - 1px)
+    @content
+
+=is-flex($vc: '', $hc: '')
+  display: flex
+  @if $vc == 'vc'
+    align-items: center
+  @if $hc == 'hc'
+    justify-content: center
+
+=is-grid($auto-flow-direction: 'column')
+  display: grid
+  @if $auto-flow-direction == 'column'
+    grid-auto-flow: column
+  @if $auto-flow-direction == 'row'
+    grid-auto-flow: row
+
+=is-lazy
+  &[lazy="loading"]
+    +bulma.loader
+    position: absolute
+    top: calc(50% - .5em)
+    left: calc(50% - .5em)
+
+=retina
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+    @content
+
+=z-index($element-name)
+  @if $element-name == 'hell'
+    z-index: -9999
+  @if $element-name == 'skyhigh'
+    z-index: 9999
+  @else
+    z-index: index(zindex.$elements, $element-name)
+
+=define-variable($namespace: '', $variableName, $value)
+  @if $namespace == ''
+    --#{$variableName}: #{$value}
+  @else
+    --#{$namespace}-#{$variableName}: #{$value}
+
+=has-transition($seconds, $properties: '')
+  @if $properties == ''
+    transition: all #{$seconds}s
+  @else
+    transition: $properties #{$seconds}s
+
+=is-clickable
+  cursor: pointer
+
+=is-circle($size)
+  width: $size
+  height: $size
+  border-radius: $size
+  overflow: hidden

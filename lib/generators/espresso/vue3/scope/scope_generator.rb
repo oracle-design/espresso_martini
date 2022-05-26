@@ -10,9 +10,12 @@ module Espresso
           template 'packs/scope.js', %(app/javascript/packs/#{normalized_scope_name}.js)
 
           template 'src/scope/css/abstracts/_color.sass', %(app/javascript/src/#{normalized_scope_name}/css/abstracts/_color.sass)
+          template 'src/scope/css/abstracts/_font.sass', %(app/javascript/src/#{normalized_scope_name}/css/abstracts/_font.sass)
           template 'src/scope/css/abstracts/_index.sass', %(app/javascript/src/#{normalized_scope_name}/css/abstracts/_index.sass)
           template 'src/scope/css/abstracts/_size.sass', %(app/javascript/src/#{normalized_scope_name}/css/abstracts/_size.sass)
           template 'src/scope/css/abstracts/_zindex.sass', %(app/javascript/src/#{normalized_scope_name}/css/abstracts/_zindex.sass)
+          template 'src/scope/css/base/_index.sass', %(app/javascript/src/#{normalized_scope_name}/css/base/_index.sass)
+          template 'src/scope/css/base/_layout.sass', %(app/javascript/src/#{normalized_scope_name}/css/base/_layout.sass)
           template 'src/scope/css/components/_index.sass', %(app/javascript/src/#{normalized_scope_name}/css/components/_index.sass)
           template 'src/scope/css/overrides/_button.sass', %(app/javascript/src/#{normalized_scope_name}/css/overrides/_button.sass)
           template 'src/scope/css/overrides/_form.sass', %(app/javascript/src/#{normalized_scope_name}/css/overrides/_form.sass)

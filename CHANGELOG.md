@@ -1,5 +1,10 @@
 # Changelog
 
+## 20220527
+
+- 修正 `@use` path 的錯誤
+- 新增預設的 `color`, `font`, `size`, `zindex`, `mixins`, `base/layout` 變數
+
 ## 20220526
 
 - 更新 component template，使用 composition API
